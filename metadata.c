@@ -108,6 +108,7 @@ void metadata_write(void) {
     write_one(artwork);
     write_one(genre);
     write_one(comment);
+    write_one(volume);
 
     ret = write(fd, "\n", 1);
     if (ret < 1)    // no reader

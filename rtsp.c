@@ -441,6 +441,8 @@ static void handle_set_parameter_parameter(rtsp_conn_info *conn,
         if (!strncmp(cp, "volume: ", 8)) {
             float volume = atof(cp + 8);
             debug(1, "volume: %f\n", volume);
+            metadata_set(&player_meta.volume, cp + 8);
+            metadata_write();
             player_volume(volume);
         } else if(!strncmp(cp, "progress: ", 10)) {
             char *progress = cp + 10;

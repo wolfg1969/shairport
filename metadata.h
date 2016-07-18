@@ -10,6 +10,7 @@ typedef struct {
     char *artwork;
     char *comment;
     char *genre;
+    char *volume;
 } metadata;
 
 void metadata_set(char** field, const char* value);
